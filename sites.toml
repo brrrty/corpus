@@ -1,0 +1,123 @@
+# Brrrty test corpus: public 11ty sites, each pinned to the commit run 3 built.
+# Read by `cargo xtask corpus --list` in brrrty/brrrty. Site code never lives here.
+# `node` is the Node major the site asks for (.nvmrc), set up per CI job.
+
+[[site]]
+repo = "nhoizey/activites.nicolas-hoizey.com"
+license = "MIT"
+commit = "39ce2706c2a48b99868dda2c41f881077f683b70"
+node = "26"
+
+[[site]]
+repo = "tempertemper/tempertemper.net"
+license = "NONE"
+commit = "7155d8a9d11ad501f8094e4f298709209b43a35b"
+node = "22"
+
+[[site]]
+repo = "maxboeck/mxb"
+license = "NONE"
+commit = "5a922eaea07d95b048b5d515d5afd2aa54c2c204"
+node = "20"
+
+[[site]]
+repo = "pepelsbey/pepelsbey.dev"
+license = "MIT"
+commit = "5d402e5e85f948e18bdd1b68061b11f2e9bfcd78"
+node = "24"
+
+[[site]]
+repo = "querkmachine/beeps.website"
+license = "MIT"
+commit = "aeeb7482c3055e0ef360328efc98df9ac49d7699"
+node = "24"
+
+[[site]]
+repo = "joshcrain/joshcrain.io"
+license = "NONE"
+commit = "a40d32a58e3f017757aa83bb8a58abeae35a1f66"
+node = "24"
+
+[[site]]
+repo = "dustinwhisman/dustinwhisman.com"
+license = "NONE"
+commit = "9b9ecfdf995a319bda3e93c34b77e0cfc67e51b1"
+node = "24"
+
+[[site]]
+repo = "jeremenichelli/jeremias.codes"
+license = "Apache-2.0"
+commit = "0b584b5dce025fbb16e3721aae0d4c393ab176b6"
+node = "20"
+
+[[site]]
+repo = "starshaped/aubreysambor.com"
+license = "NONE"
+commit = "4a18474c9ea823bbd52e8759bb728c0e90db7dad"
+node = "24"
+
+[[site]]
+repo = "dogwonder/seasonal.today"
+license = "MIT"
+commit = "d02b381291a2440c4f0da953dcc0cb9888c21506"
+node = "24"
+
+[[site]]
+repo = "benjifs/benji"
+license = "MIT"
+commit = "0811ea4625c23651d4cad2ffaf51ceb51f7dc12b"
+node = "24"
+
+[[site]]
+repo = "nhoizey/nicolas-hoizey.photo"
+license = "MIT"
+commit = "c144968a3dce386408f64ee2e78a8e36b1c26bee"
+node = "22"
+
+[[site]]
+repo = "DFE-Digital/bat-design-history"
+license = "MIT"
+commit = "9616c16c64149359fc1c08619e793b92f776cdcb"
+node = "20"
+
+[[site]]
+repo = "inclusive-design/wecount.inclusivedesign.ca"
+license = "BSD-3-Clause"
+commit = "75be9578fb104e2bd8339305a9ca3de5d730ac88"
+node = "24"
+
+[[site]]
+repo = "IGNF/cartes.gouv.fr-documentation"
+license = "MIT"
+commit = "2b9055b8c37196f60fd26eb169f6b7ed2fa1e6ca"
+node = "24"
+
+[[site]]
+repo = "XBlueSky/vatt-ghern"
+license = "MIT"
+commit = "f4c4503ff753470e92fde7c62784ea290524b957"
+node = "20"
+
+[[site]]
+repo = "j0k3r/blog"
+license = "MIT"
+commit = "db225c433b69babef8fce3dd4ee4988e36d92427"
+node = "24"
+
+[[site]]
+repo = "09ashishkapoor/jaikhyapaparampara"
+license = "MIT"
+commit = "26ae2808c3fe1d86d968d6b790fddddd80eccdc4"
+node = "18"
+
+[[site]]
+repo = "si/11ty"
+license = "MIT"
+commit = "af74e1a8d96bd54afc3352b0e87e3e0d24f8f514"
+node = "24"
+
+[[site]]
+repo = "datainkio/portfolio-frontend"
+license = "MIT"
+commit = "ab41b638113703aaa54beb5e17bca26a4b92ad9e"
+node = "24"
