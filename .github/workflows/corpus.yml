@@ -161,7 +161,11 @@ jobs:
         run: |
           chmod +x "$RUNNER_TEMP/bin/xtask"
           mkdir -p out
-          "$RUNNER_TEMP/bin/xtask" corpus-merge --list corpus/sites.toml --out out/corpus.json results/*/result.json
+          # One matching artifact lands straight in results/, several land in
+          # results/<name>/, so find them rather than glob one shape.
+          mapfile -t files < <(find results -name result.json | sort)
+          [ "${#files[@]}" -gt 0 ] || { echo "no result.json in any artifact"; exit 1; }
+          "$RUNNER_TEMP/bin/xtask" corpus-merge --list corpus/sites.toml --out out/corpus.json "${files[@]}"
           "$RUNNER_TEMP/bin/xtask" corpus-report out/corpus.json > out/report.md
           {
             echo "# Corpus run: brrrty $(cat "$RUNNER_TEMP/bin/brrrty-commit.txt")"
