@@ -139,3 +139,9 @@ repo = "andreacorinti/andreacorinti.com"
 license = "ISC"
 commit = "ea0a9d0a8c24e4b21cc0389930777f45fe8ecc10"
 node = "24"
+
+[[site]]
+repo = "mhaack/mh-site"
+license = "MIT"
+commit = "3fc354837629c1b2cd586f3c931b20e4a463f71c"
+node = "24"
