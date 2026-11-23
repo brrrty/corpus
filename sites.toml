@@ -133,3 +133,9 @@ repo = "dapierce/dapierce.github.io"
 license = "MIT"
 commit = "f2283a5ba9b47a1aab72c10b5a8b47aaa8f38fd7"
 node = "20"
+
+[[site]]
+repo = "andreacorinti/andreacorinti.com"
+license = "ISC"
+commit = "ea0a9d0a8c24e4b21cc0389930777f45fe8ecc10"
+node = "24"
