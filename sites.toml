@@ -145,3 +145,9 @@ repo = "mhaack/mh-site"
 license = "MIT"
 commit = "3fc354837629c1b2cd586f3c931b20e4a463f71c"
 node = "24"
+
+[[site]]
+repo = "ashfurrow/blog"
+license = "MIT (code), CC-BY-4.0 (content)"
+commit = "e5f094ce00462cb8026dfe61e5402e814cba06f0"
+node = "26"
