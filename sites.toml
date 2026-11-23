@@ -157,3 +157,9 @@ repo = "freshjuice-dev/campaign-url-builder.com"
 license = "MIT"
 commit = "2228b0ceb4b4757574c4e9052945fb4687d7608b"
 node = "20"
+
+[[site]]
+repo = "partheus/partheus.github.io"
+license = "GPL-3.0"
+commit = "b44ae8bc762be496ff0f3837e0c1d461e409fec8"
+node = "24"
