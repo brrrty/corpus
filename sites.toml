@@ -151,3 +151,9 @@ repo = "ashfurrow/blog"
 license = "MIT (code), CC-BY-4.0 (content)"
 commit = "e5f094ce00462cb8026dfe61e5402e814cba06f0"
 node = "26"
+
+[[site]]
+repo = "freshjuice-dev/campaign-url-builder.com"
+license = "MIT"
+commit = "2228b0ceb4b4757574c4e9052945fb4687d7608b"
+node = "20"
