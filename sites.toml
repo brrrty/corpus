@@ -121,3 +121,9 @@ repo = "datainkio/portfolio-frontend"
 license = "MIT"
 commit = "ab41b638113703aaa54beb5e17bca26a4b92ad9e"
 node = "24"
+
+[[site]]
+repo = "strngx/samachardaily"
+license = "MIT"
+commit = "6d90fccb51b2f69600b14efd24ab18997245212c"
+node = "24"
