@@ -127,3 +127,9 @@ repo = "strngx/samachardaily"
 license = "MIT"
 commit = "6d90fccb51b2f69600b14efd24ab18997245212c"
 node = "24"
+
+[[site]]
+repo = "dapierce/dapierce.github.io"
+license = "MIT"
+commit = "f2283a5ba9b47a1aab72c10b5a8b47aaa8f38fd7"
+node = "20"
