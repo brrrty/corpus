@@ -163,3 +163,9 @@ repo = "partheus/partheus.github.io"
 license = "GPL-3.0"
 commit = "b44ae8bc762be496ff0f3837e0c1d461e409fec8"
 node = "24"
+
+[[site]]
+repo = "djpowers/personal-site"
+license = "MIT"
+commit = "d9d087d914f846271f1b432dca8044a38e5c3219"
+node = "18"
