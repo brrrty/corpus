@@ -169,3 +169,9 @@ repo = "djpowers/personal-site"
 license = "MIT"
 commit = "d9d087d914f846271f1b432dca8044a38e5c3219"
 node = "18"
+
+[[site]]
+repo = "thecrinkles/crinkles.dev"
+license = "NONE"
+commit = "1d05f3653e13b838892b41190ed254e57f7e684f"
+node = "24"
