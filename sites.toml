@@ -175,3 +175,9 @@ repo = "thecrinkles/crinkles.dev"
 license = "NONE"
 commit = "1d05f3653e13b838892b41190ed254e57f7e684f"
 node = "24"
+
+[[site]]
+repo = "11ty/eleventy-base-blog"
+license = "MIT"
+commit = "ae47fc5ef40d8ebf53f0e185ee5f0e61e7e6e2d4"
+node = "22"
