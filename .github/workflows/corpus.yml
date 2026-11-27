@@ -7,6 +7,8 @@ name: Corpus
 # This repo is public. Site jobs run third-party code, so: no secrets, no
 # caches (a site job could poison one), read-only contents, and every
 # artifact expires after a day (results are copied out by the reader).
+# Only the `progress` job can write, it runs no site code, and it reads the
+# merged results as data (numbers only) to draw the compatibility chart.
 
 on:
   workflow_dispatch:
@@ -20,7 +22,8 @@ on:
         required: false
         default: ""
   schedule:
-    - cron: "23 6 * * 1"
+    # Daily, before the worker's 07:00 triage (10:23 UTC is 04:23 Central).
+    - cron: "23 10 * * *"
 
 permissions:
   contents: read
@@ -177,3 +180,41 @@ jobs:
           name: corpus-results
           path: out
           retention-days: 1
+
+  # The compatibility chart in brrrty/brrrty's README: a full run on main
+  # (scheduled, or dispatched for main with no site filter) appends its
+  # numbers to progress/history.csv and redraws progress/compat.svg on the
+  # `progress` branch.
+  progress:
+    needs: [report]
+    if: ${{ github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (inputs.site == '' && inputs.brrrty_ref == 'main')) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: corpus
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: corpus-results
+          path: results
+      - name: Update the chart on the progress branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git clone -q --no-checkout "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" progress
+          cd progress
+          if git ls-remote --exit-code --heads origin progress >/dev/null; then
+            git checkout -q progress
+          else
+            git checkout -q --orphan progress && git rm -rqf . 2>/dev/null || true
+          fi
+          mkdir -p progress
+          python3 -I ../corpus/scripts/progress.py ../results/corpus.json progress/history.csv progress/compat.svg
+          git add progress
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -qm "progress: $(date -u +%F)" || { echo "no change"; exit 0; }
+          git push -q origin progress
