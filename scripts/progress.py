@@ -161,7 +161,7 @@ def svg(history):
         a(f'<line class="grid" x1="{hx}" x2="{hx + hw}" y1="{y:.1f}" y2="{y:.1f}" stroke-width="1"/>')
         a(f'<text class="t2" x="{hx - 6}" y="{y + 4:.1f}" font-size="11" text-anchor="end">{round(top * frac)}</text>')
     shown = history[-60:]
-    slot = hw / max(len(shown), 1)
+    slot = hw / 60  # fixed slots: history grows from the left
     cw = max(min(slot - 2, 18), 1)
     for idx, r in enumerate(shown):
         cx = hx + idx * slot + (slot - cw) / 2
